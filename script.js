@@ -6,7 +6,7 @@ let timerDisplay = document.getElementById('timer');
 let body = document.body;
 
 function startTimer() {
-  resetTimer(); 
+   resetTimer(); 
 
   let hours = parseInt(hoursInput.value, 10) || 0;
   let minutes = parseInt(minutesInput.value, 10) || 0;
