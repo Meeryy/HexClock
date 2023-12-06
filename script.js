@@ -44,7 +44,25 @@ function resetTimer() {
   timerDisplay.textContent = '00:00:00';
   body.style.backgroundColor = ''; 
 }
+///
+function getOf(){
+    const hour = new Date();
+    hour.getHours;
+    const min = new Date();
+    min.getMinutes;
+    const sec = new Date();
+    sec.getSeconds;
+    getHexColor2(hour, min, sec);
+}
 
+function getHexColor2(hour, min, sec) {
+    let hexHours2 = hour.toString(16).padStart(2, '0');
+    let hexMinutes2 = min.toString(16).padStart(2, '0');
+    let hexSeconds2 = sec.toString(16).padStart(2, '0');
+  
+    return `${hexHours2}${hexMinutes2}${hexSeconds2}`;
+  }
+///
 function getHexColor(hours, minutes, seconds) {
   let hexHours = hours.toString(16).padStart(2, '0');
   let hexMinutes = minutes.toString(16).padStart(2, '0');
