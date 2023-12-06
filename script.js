@@ -44,7 +44,7 @@ function resetTimer() {
   timerDisplay.textContent = '00:00:00';
   body.style.backgroundColor = ''; 
 }
-///
+/// not GPT
 function getOf(){
     const hour = new Date();
     hour.getHours;
