@@ -61,12 +61,33 @@ function getHexColor2(hour, min, sec) {
     let hexSeconds2 = sec.toString(16).padStart(2, '0');
   
     return `${hexHours2}${hexMinutes2}${hexSeconds2}`;
+
+
+    
+}
+
+  colors = setColors(function() {
+    let hoursDisplay = hexHours2;
+    let minutesDisplay = hexMinutes2;
+    let secondsDisplay = hexSeconds2;
+
+    timerDisplay.textContent = `${hoursDisplay.toString().padStart(2, '0')}:${minutesDisplay.toString().padStart(2, '0')}:${secondsDisplay.toString().padStart(2, '0')}`;
+
+    let hexColor = getHexColor(hoursDisplay, minutesDisplay, secondsDisplay);
+    body.style.backgroundColor = `#${hexColor}`;
+  
+  
+
+
   }
+  )
+
 ///
-function getHexColor(hours, minutes, seconds) {
-  let hexHours = hours.toString(16).padStart(2, '0');
+ function getHexColor(hours, min, sec) {
+   let hexHours = hours.toString(16).padStart(2, '0');
   let hexMinutes = minutes.toString(16).padStart(2, '0');
   let hexSeconds = seconds.toString(16).padStart(2, '0');
 
   return `${hexHours}${hexMinutes}${hexSeconds}`;
-}
+ }
+
