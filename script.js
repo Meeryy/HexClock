@@ -52,7 +52,8 @@ function getOf(){
     min.getMinutes;
     const sec = new Date();
     sec.getSeconds;
-    getHexColor2(hour, min, sec);
+    getHexColor2(colors);
+    
 }
 
 function getHexColor2(hour, min, sec) {
