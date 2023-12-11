@@ -46,14 +46,13 @@ function resetTimer() {
 }
 /// not GPT
 function getOf(){
-    const hour = new Date();
-    hour.getHours;
-    const min = new Date();
-    min.getMinutes;
-    const sec = new Date();
-    sec.getSeconds;
-    getHexColor2(colors);
-    
+   const hour = new Date();
+   hour.getHours();
+   const min = new Date();
+   min.getMinutes();
+   const sec = new Date();
+   sec.getSeconds();
+    return getHexColor2(hour.getHours(), min.getMinutes(), sec.getSeconds());    
 }
 
 function getHexColor2(hour, min, sec) {
@@ -67,21 +66,9 @@ function getHexColor2(hour, min, sec) {
     
 }
 
-  colors = setColors(function() {
-    let hoursDisplay = hexHours2;
-    let minutesDisplay = hexMinutes2;
-    let secondsDisplay = hexSeconds2;
-
-    timerDisplay.textContent = `${hoursDisplay.toString().padStart(2, '0')}:${minutesDisplay.toString().padStart(2, '0')}:${secondsDisplay.toString().padStart(2, '0')}`;
-
-    let hexColor = getHexColor(hoursDisplay, minutesDisplay, secondsDisplay);
-    body.style.backgroundColor = `#${hexColor}`;
-  
-  
-
-
-  }
-  )
+document.getElementById('getof').addEventListener('click', function () {
+  resetTimer();
+});
 
 ///
  function getHexColor(hours, min, sec) {
