@@ -44,7 +44,6 @@ function  resetTimer() {
   timerDisplay.textContent = '00:00:00';
   body.style.backgroundColor = ''; 
 }
-/// not GPT
 function getOf(){
    const hour = new Date();
    hour.getHours();
@@ -70,7 +69,7 @@ document.getElementById('getof').addEventListener('click', function () {
   resetTimer();
 });
 
-///
+
  function getHexColor(hours, min, sec) {
    let hexHours = hours.toString(16).padStart(2, '0');
   let hexMinutes = minutes.toString(16).padStart(2, '0');
